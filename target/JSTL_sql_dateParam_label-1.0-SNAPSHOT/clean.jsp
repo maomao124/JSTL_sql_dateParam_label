@@ -16,7 +16,10 @@
     <title>Title</title>
 </head>
 <body>
-
+<c:if test="${sessionScope.student==null}" >
+    <sql:setDataSource var="student" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/student"
+                       user="root" password="20010713" scope="session"/>
+</c:if>
 <%--
 var：用来存储所影响行数的变量；
 dataSource：连接的数据源；
