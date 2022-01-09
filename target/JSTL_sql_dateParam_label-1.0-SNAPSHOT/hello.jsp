@@ -33,7 +33,7 @@ dataSource：已经存在的数据源；
 scope：设定参数 var 的有效范围，默认为 page
 --%>
 <sql:setDataSource var="student" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/student"
-                   user="root" password="20010713"/>
+                   user="root" password="20010713" scope="session"/>
 <%
     Timestamp create = new Timestamp(System.currentTimeMillis());
 %>
